@@ -2,5 +2,5 @@
 
 kmain(){
     clearScreen();
-    print("Lohit Ragavendra\n");
+    print("Welcome to my Operating System\n");
 }
