@@ -90,7 +90,8 @@ void printch(char c){
 
 void print (string ch){
       uint16 i=0;
-      for(i;i<strlength(ch);i++){
+      uint16 length = strlength(ch)-1;  // Store the string length
+      for(i;i<length;i++){
           printch(ch[i]);
       }
 }
