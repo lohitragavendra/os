@@ -1,6 +1,8 @@
 #include "include/screen.h"
 #include "include/kb.h"
 #include "include/string.h"
+#include "include/system.h"
+
 void kmain()
 {
        clearScreen();
@@ -10,7 +12,6 @@ void kmain()
                 print("\n>>> ");
                 
                 string ch = readStr();
-                print(ch);
                 if(strEql(ch,"cmd"))
                 {
                         print("\nYou are already in cmd\n");

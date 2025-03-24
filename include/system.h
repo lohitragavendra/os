@@ -3,6 +3,7 @@
 #include "types.h"
 // to communicate to ports 
 // cant be done using c program so we use asm
+
 uint8 inportb (uint16 _port){
     uint8 rv;
     __asm__ __volatile__ ("inb %1, %0" : "=a" (rv) : "dN" (_port));

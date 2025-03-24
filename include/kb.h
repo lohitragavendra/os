@@ -1,5 +1,6 @@
 #ifndef KB_H
 #define KB_H
+#include "string.h"
 #include "screen.h"
 #include "system.h"
 #include "types.h"
@@ -308,4 +309,5 @@ string readStr()
     buffstr[i] = 0;                   
     return buffstr;
 }
+
 #endif
