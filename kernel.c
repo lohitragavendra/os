@@ -2,34 +2,38 @@
 #include "include/kb.h"
 #include "include/string.h"
 #include "include/system.h"
+#include "include/idt.h"
+#include "include/isr.h"
+#include "include/util.h"
 
 void kmain()
 {
+       isr_install();
        clearScreen();
        print("Welcome to Lohit's operating system\nPlease enter a command\n");
+       
        while (1)
-       {
+       {                      
                 print("\n>>> ");
-                
                 string ch = readStr();
-                if(strEql(ch,"cmd"))
+                
+                if(strEql(ch, "lohit"))
                 {
-                        print("\nYou are already in cmd\n");
+                        print("\nHe's the creator of this OS :) \n");
                 }
-                if(strEql(ch,"lohit"))
+                else if(strEql(ch, "cmd"))
                 {
-                        print("\nHe's the creator of this os :)\n");
+                        print("\nYou are already in cmd \n");
                 }
-                else if(strEql(ch,"clear"))
+                else if(strEql(ch, "clear"))
                 {
                         clearScreen();
                 }      
                 else
                 {
-                        print("\nBad command!\n");
+                        print("\nInvalid command! \n");
                 }
-                
                 print("\n");        
-       }
-        
+       } 
 }
+
