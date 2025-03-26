@@ -2,6 +2,17 @@
 #define STRING_H
 
 #include "types.h"
+uint16 strlength(string ch);
+
+uint8 strEql(string ch1,string ch2);
+
+#endif
+
+/*
+#ifndef STRING_H
+#define STRING_H
+
+#include "types.h"
 
 uint16 strlength(string ch){
     uint16 i = 1;
@@ -23,7 +34,7 @@ uint16 strlength(string ch){
         }
         }
         return result;
-}*/
+}
 
 uint8 strEql(string ch1, string ch2)                     
 {
@@ -41,3 +52,4 @@ uint8 strEql(string ch1, string ch2)
 
 
 #endif
+*/

@@ -1,5 +1,16 @@
 #ifndef KB_H
 #define KB_H
+#include "screen.h"
+#include "util.h"
+
+string readStr();
+
+#endif
+
+
+/*
+#ifndef KB_H
+#define KB_H
 #include "string.h"
 #include "screen.h"
 #include "system.h"
@@ -19,11 +30,11 @@ string readStr()
         {
             switch(inportb(0x60))
             { 
-      /*case 1:
-                printch('(char)27);           Escape button
-                buffstr[i] = (char)27;
-                i++;
-                break;*/
+      //case 1:
+        //        printch('(char)27);           Escape button
+        //       buffstr[i] = (char)27;
+        //        i++;
+        //        break;
         case 2:
                 printch('1');
                 buffstr[i] = '1';
@@ -89,11 +100,11 @@ string readStr()
                 i--;
                 buffstr[i] = 0;
                 break;
-       /* case 15:
-                printch('\t');          Tab button
-                buffstr[i] = '\t';
-                i++;
-                break;*/
+       // case 15:
+       //         printch('\t');          Tab button
+       //         buffstr[i] = '\t';
+       //         i++;
+       //         break;
         case 16:
                 printch('q');
                 buffstr[i] = 'q';
@@ -160,11 +171,11 @@ string readStr()
                   i++;
                reading = 0;
                 break;
-      /*  case 29:
-                printch('q');           Left Control
-                buffstr[i] = 'q';
-                i++;
-                break;*/
+      //  case 29:
+      //          printch('q');           Left Control
+      //          buffstr[i] = 'q';
+      //          i++;
+      //         break;
         case 30:
                 printch('a');
                 buffstr[i] = 'a';
@@ -225,16 +236,16 @@ string readStr()
                 buffstr[i] = (char)44;
                 i++;
                 break;
-     /* case 42:                                 Left shift 
-                printch('q');
-                buffstr[i] = 'q';
-                i++;
-                break;
-        case 43:                                 \ (< for somekeyboards)   
-                printch((char)92);
-                buffstr[i] = 'q';
-                i++;
-                break;*/
+     // case 42:                                 Left shift 
+     //           printch('q');
+     //           buffstr[i] = 'q';
+     //           i++;
+     //           break;
+    //  case 43:                                 \ (< for somekeyboards)   
+    //          printch((char)92);
+    //            buffstr[i] = 'q';
+    //            i++;
+    //            break;
         case 44:
                 printch('z');
                 buffstr[i] = 'z';
@@ -295,11 +306,11 @@ string readStr()
                 buffstr[i] = '/';
                 i++;
                 break;            
-      /*case 56:
-                printch(' ');           Right shift
-                buffstr[i] = ' ';
-                i++;
-                break;*/           
+      //case 56:
+      //          printch(' ');           Right shift
+      //          buffstr[i] = ' ';
+      //          i++;
+      //          break;           
         case 57:
                 printch(' ');
                 buffstr[i] = ' ';
@@ -397,6 +408,3 @@ string readStr()
 */
 
 
-
-
-#endif

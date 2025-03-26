@@ -1,12 +1,9 @@
-#include "kb.h"
-#include "screen.h"
-#include "system.h"
-#include "types.h"
 
+#include "../include/kb.h"
 string readStr()
 {
     char buff;
-    string buffstr;
+    string buffstr = (string) malloc(200);
     uint8 i = 0;
     uint8 reading = 1;
     while(reading)
@@ -83,6 +80,11 @@ string readStr()
         case 14:
                 printch('\b');
                 i--;
+                if(i<0)
+                {
+                	i = 0;
+                }
+                buffstr[i+1] = 0;
                 buffstr[i] = 0;
                 break;
        /* case 15:
@@ -304,6 +306,6 @@ string readStr()
             }
         }
     }
-    buffstr[i] = 0;                   
+    buffstr[i-1] = 0;                
     return buffstr;
 }

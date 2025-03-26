@@ -1,6 +1,16 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 #include "types.h"
+uint8 inportb (uint16 _port);
+
+void outportb (uint16 _port, uint8 _data);
+
+#endif
+
+/*
+#ifndef SYSTEM_H
+#define SYSTEM_H
+#include "types.h"
 // to communicate to ports 
 // cant be done using c program so we use asm
 
@@ -15,3 +25,4 @@ void outportb (uint16 _port, uint8 _data){
 }
 
 #endif
+*/
